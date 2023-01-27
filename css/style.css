@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    
+    grid-template-areas: 
+    "encabezado"
+    "contenedor"
+    "pie";
+}
+@media (min-width: 1080px){
+    .grid-container{
+        grid-template:
+        "encabezado" 500px
+        "contenedor" 500px
+        "pie" 200px /
+        auto;
+    }
+}
+
+.encabezado{
+    grid-area: encabezado;
+    
+    display: grid;
+    grid-template-areas: 
+    "ban"
+    "nave";
+}
+@media (min-width: 1080px){
+    .encabezado{
+        grid-template: 
+        "ban" 400px
+        "nave" 100px /
+        auto
+    }
+}
+.ban{
+    grid-area: ban;
+    background-image: url(../image/Centro\ veterinario.png);
+    background-size: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+.ban{
+    background-image: url(../image/Centro\ veterinario.png);
+}
+.nave{
+    grid-area: nave;
+    background-color: rgb(40, 90, 27);
+    border: 1px solid;
+    display: flex;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.nave>li{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 1280px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.nave>li>article{
+    width: 300px;
+    height:50px;
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nave>li>article>a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.contenedor{
+    grid-area: contenedor;
+    gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    "contenedor-text"
+    "datos";
+}
+@media (min-width: 1080px){
+    .contenedor{
+        grid-template: 
+        "contenedor-text datos" 500px /
+        900px auto;
+    }
+}
+.contenedor-text{
+ grid-area: contenedor-text;
+ border: 1px solid white;
+ display: grid;
+ gap: 10px;
+}
+.contenedor-text>article{
+    width: 100%;
+    height: 235px;
+    border: 1px solid white;
+    background-color: rgb(236, 236, 84);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-text>article>main{
+    width: 95%;
+    display: grid;
+    gap: 10px;
+}
+
+.texto{
+    
+    display: flex;
+}
+.texto>img{
+    border: 1px solid;
+    border-radius: 20px;
+}
+.datos{
+ grid-area: datos;
+ background-color: rgb(73, 146, 73);
+ border-radius: 30px;
+ display: flex;
+ flex-direction: column;
+}
+.datos>header{
+    height: 3rem;
+    text-align: center;
+    background-color: rgb(24, 88, 24);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.datos>main{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.datos>main>div{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 20px;
+    color: white;
+}
+.datos>footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.datos>footer>article{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 201, 201);
+    border-radius: 10px;
+}
+.pie{
+    grid-area: pie;
+    background-color: rgb(56, 122, 56);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     color: white;
+}
